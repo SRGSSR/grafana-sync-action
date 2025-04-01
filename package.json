@@ -1,0 +1,45 @@
+{
+  "name": "@srgssr/grafana-sync",
+  "description": "A GitHub Action for backing up Grafana dashboards.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "SRG SSR",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SRGSSR/grafana-sync-action.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": [
+    "actions",
+    "grafana"
+  ],
+  "homepage": "https://github.com/SRGSSR/grafana-sync-action",
+  "type": "module",
+  "main": "src/index.mjs",
+  "scripts": {
+    "start": "node src/index.mjs",
+    "eslint": "eslint src/*.{mjs,js,jsx}",
+    "outdated": "npm outdated",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.23.0",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/github": "^11.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.3",
+    "@types/node": "^22.13.17",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "eslint": "^9.23.0",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "semantic-release": "^24.2.3"
+  }
+}

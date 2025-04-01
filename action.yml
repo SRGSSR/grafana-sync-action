@@ -13,9 +13,5 @@ inputs:
     required: false
     default: 'dashboards'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  env:
-    GRAFANA_URL: ${{ inputs.grafana-url }}
-    API_TOKEN: ${{ inputs.api-key }}
-    OUTPUT_DIR: ${{ inputs.dir }}
+  using: 'node20'
+  main: 'src/index.mjs'
