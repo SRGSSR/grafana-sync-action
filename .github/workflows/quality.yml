@@ -12,8 +12,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
 
-      - name: Build Docker image
-        run: docker build -t grafana-sync-action .
+      - name: Install dependencies
+        run: |
+          npm pkg delete scripts.prepare
+          npm ci
+
+      - name: Run JS and linter
+        run: |
+          npm run eslint
