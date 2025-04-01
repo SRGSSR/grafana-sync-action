@@ -1,0 +1,21 @@
+name: 'Grafana Sync'
+description: 'Sync Grafana dashboards using grafana-sync'
+author: 'SRG SRR <Pillarbox-Team@rts.ch>'
+inputs:
+  grafana-url:
+    description: 'The URL of the Grafana instance'
+    required: true
+  api-key:
+    description: 'Grafana API key'
+    required: true
+  dir:
+    description: 'Directory to store dashboards'
+    required: false
+    default: 'dashboards'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    GRAFANA_URL: ${{ inputs.grafana-url }}
+    API_TOKEN: ${{ inputs.api-key }}
+    OUTPUT_DIR: ${{ inputs.dir }}
