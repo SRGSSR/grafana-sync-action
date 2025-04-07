@@ -1,5 +1,5 @@
 name: 'Grafana Sync'
-description: 'Sync Grafana dashboards using grafana-sync'
+description: 'Sync Grafana dashboards for backing up'
 author: 'SRG SRR <Pillarbox-Team@rts.ch>'
 inputs:
   grafana-url:
