@@ -41,4 +41,13 @@ export class BackupStorage {
     fs.writeFileSync(outputFilePath, JSON.stringify(dashboard, null, 2));
     console.log(`Saved dashboard to: ${outputFilePath}`);
   }
+
+  /**
+   * Clears all contents (files and subdirectories) of the base directory.
+   * This method recursively deletes all files and folders inside the base directory.
+   */
+  clear() {
+    fs.rmSync(this.baseDir, {recursive: true, force: true});
+    console.log(`Cleared all contents of: ${this.baseDir}`);
+  }
 }

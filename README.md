@@ -45,10 +45,11 @@ A GitHub Action that automates the process of backing up Grafana dashboards.
             fetch-depth: 0
 
         - name: Run Grafana Sync
-          uses: srgssr/grafana-sync-action@v2.0.0
+          uses: srgssr/grafana-sync-action@v1.2.0
           with:
             grafana-url: ${{ secrets.GRAFANA_URL }}
             api-key: ${{ secrets.GRAFANA_API_KEY }}
+            clear: true
             dir: 'dashboards'
 
         - name: Create Pull Request
