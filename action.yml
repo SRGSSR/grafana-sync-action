@@ -12,6 +12,10 @@ inputs:
     description: 'Directory to store dashboards'
     required: false
     default: 'dashboards'
+  clear:
+    description: 'Whether to clear the target directory before storing new data'
+    required: false
+    default: 'false'
 runs:
   using: 'node20'
   main: 'src/index.mjs'

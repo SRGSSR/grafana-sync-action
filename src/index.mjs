@@ -3,16 +3,19 @@ import {BackupStorage} from "./backup-storage.mjs";
 import {getInput} from "./utils.mjs";
 
 try {
-  const GRAFANA_URL = getInput('grafana-url');
-  const API_TOKEN = getInput('api-key');
-  const OUTPUT_DIR = getInput('dir', 'dashboards');
+  const grafanaUrl = getInput('grafana-url');
+  const apiToken = getInput('api-key');
+  const outputDir = getInput('dir', 'dashboards');
+  const clear = getInput('clear', 'false') === 'true';
 
   console.log('Starting Grafana Export...');
-  console.log(`Grafana URL: ${GRAFANA_URL}`);
-  console.log(`Output Directory: ${OUTPUT_DIR}`);
+  console.log(`Grafana URL: ${grafanaUrl}`);
+  console.log(`Output Directory: ${outputDir}`);
 
-  const client = new GrafanaClient(GRAFANA_URL, API_TOKEN);
-  const storage = new BackupStorage(OUTPUT_DIR);
+  const client = new GrafanaClient(grafanaUrl, apiToken);
+  const storage = new BackupStorage(outputDir);
+
+  if (clear) storage.clear();
 
   const folders = await client.getFolders();
   const dashboardsData = await client.getDashboards();
