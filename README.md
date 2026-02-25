@@ -98,6 +98,19 @@ npm run prepare
 
 Refer to our [Contribution Guide](docs/CONTRIBUTING.md) for more detailed information.
 
+### Using `nvm`
+
+This project includes an `.nvmrc` file that specifies the recommended Node.js version.
+
+If you use `nvm`, you can automatically switch to the correct Node version by running: `nvm use`
+If the required version is not installed yet, run: `nvm install`. This will install the Node.js
+version defined in `.nvmrc` and switch your shell to use it.
+
+For more details on installing and using the `.nvmrc` file see the official
+[`.nvmrc` documentation][nvmrc-doc].
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+[nvmrc-doc]: https://github.com/nvm-sh/nvm?tab=readme-ov-file#nvmrc
