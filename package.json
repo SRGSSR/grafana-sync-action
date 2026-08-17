@@ -28,7 +28,7 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@commitlint/cli": "^21.2.1",
+    "@commitlint/cli": "^21.2.2",
     "@commitlint/config-conventional": "^21.2.0",
     "@eslint/eslintrc": "^3.3.6",
     "@eslint/js": "^10.0.1",
@@ -36,10 +36,10 @@
     "@semantic-release/github": "^12.0.9",
     "@semantic-release/release-notes-generator": "^14.1.1",
     "@types/node": "^24.10.13",
-    "conventional-changelog-conventionalcommits": "^10.2.1",
-    "eslint": "^10.8.0",
-    "globals": "^17.8.0",
+    "conventional-changelog-conventionalcommits": "^10.3.0",
+    "eslint": "^10.8.1",
+    "globals": "^17.11.0",
     "husky": "^9.1.7",
-    "semantic-release": "^25.0.8"
+    "semantic-release": "^25.0.9"
   }
 }
