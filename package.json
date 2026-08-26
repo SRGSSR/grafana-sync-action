@@ -35,7 +35,7 @@
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/github": "^12.0.9",
     "@semantic-release/release-notes-generator": "^14.1.1",
-    "@types/node": "^24.10.13",
+    "@types/node": "^26.2.0",
     "conventional-changelog-conventionalcommits": "^10.3.0",
     "eslint": "^10.8.1",
     "globals": "^17.11.0",
