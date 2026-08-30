@@ -22,3 +22,8 @@ updates:
       node-dependencies:
         patterns: [ "*" ]
         update-types: [ "minor", "patch" ]
+    ignore:
+      # @types/node majors track the Node major (.nvmrc); bump it only when
+      # the supported runtime moves.
+      - dependency-name: "@types/node"
+        update-types: [ "version-update:semver-major" ]
